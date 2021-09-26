@@ -13,8 +13,11 @@ import re
 def data_load(request):
     data = {}
 
-    response = requests.get("https://api.blockchain.com/v3/exchange/l3/"+request.GET['coin'])
-    data = response.json()
+    try:
+        response = requests.get("https://api.blockchain.com/v3/exchange/l3/"+request.GET['coin'])
+        data = response.json()
+    except:
+        return HttpResponse(status = 400)
 
     try:
         #Borramos en BD si ya existe esa busqueda para actualizar los datos
@@ -43,8 +46,10 @@ def statistics_bids(request):
     total_px = 0
 
     data_to_send = {}
-
-    crypto_aux = Crypto.objects.filter(symbol = request.GET['coin'])
+    try:
+        crypto_aux = Crypto.objects.filter(symbol = request.GET['coin'])
+    except:
+        return HttpResponse(status = 400)
     
     try:
         #Limpiamos los valores que no necesitamos
@@ -86,7 +91,10 @@ def statistics_asks(request):
 
     data_to_send = {}
 
-    crypto_aux = Crypto.objects.filter(symbol = request.GET['coin'])
+    try:
+        crypto_aux = Crypto.objects.filter(symbol = request.GET['coin'])
+    except:
+        return HttpResponse(status = 400)
     
     try:
 

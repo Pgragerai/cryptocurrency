@@ -15,14 +15,14 @@ Pasos para cargar el proyecto en tu pc
 $ git clone https://github.com/Pgragerai/cryptocurrency.git
 ```
 
-Una vez clonado el proyecto debemos activar el entorno virtual 
+Una vez clonado, en el proyecto debemos activar el entorno virtual 
 
 ```console
 $ cd myenv/Scripts
 $ activate
 ```
 
-En el caso que se quiera desactivar el entorno virtual. En la misma ruta que la anterior consola ejecutamos lo siguiente 
+En el caso que se quiera desactivar el entorno virtual. En la misma ruta que la anterior consola, ejecutamos lo siguiente 
 
 ```console
 $ deactivate
@@ -36,11 +36,11 @@ $ pip install -r requirements.txt
 
 Debemos tener una base de datos mongo en el equipo y poner la configuración correspondiente en el apartado “DATABASES” del fichero settings.py
 
-![alt text](project-img/settings.png)
+![alt text](project-img/settings.PNG)
 
 ## Proyecto
 
-Una vez realizado los paso anteriores, lanzaremos la app
+Una vez realizado los pasos anteriores, lanzaremos la app
 
 ```console
 $ python manage.py runserver   
@@ -48,7 +48,7 @@ $ python manage.py runserver
 
 Si todo ha ido bien debe aparecer en nuestra consola algo similar
 
-![alt text](project-img/consola1.png)
+![alt text](project-img/consola1.PNG)
 
 Si se quiere ejecutar los test usaremos el siguiente comando
 

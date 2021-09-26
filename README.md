@@ -34,6 +34,10 @@ En la ruta raíz del proyecto, ejecutamos el siguiente comando para instalar tod
 $ pip install -r requirements.txt
 ```
 
+Debemos tener una base de datos mongo en el equipo y poner la configuración correspondiente en el apartado “DATABASES” del fichero settings.py
+
+![alt text](project-img/settings.png)
+
 ## Proyecto
 
 Una vez realizado los paso anteriores, lanzaremos la app
@@ -61,7 +65,7 @@ La app consta de cuatro peticiones:
 
 ## Carga de datos
 
-Para realizar la carga de datos deberemos llamar a la siguiente dirección con la app levantada. Para realizar la llamada correctamente debemos pasarle como parámetro un símbolo compuesto de una criptomoneda y una moneda real, en este ejemplo “ETH-USD”, a través de coin.
+Para realizar la carga de datos debemos llamar a la siguiente dirección con la app levantada. Para realizar la llamada correctamente debemos pasarle como parámetro un símbolo compuesto de una criptomoneda y una moneda real, en este ejemplo “ETH-USD”, a través de coin.
 
 http://127.0.0.1:8000/crypto/data_load?coin=ETH-USD/
 
@@ -167,3 +171,9 @@ Ejemplo de JSON devuelto por la llamada a la URL
     }
 }
 ```
+
+Si surge algún problema con Django puede consultar el siguiente enlace
+
+https://tutorial.djangogirls.org/es/python_installation/
+
+
